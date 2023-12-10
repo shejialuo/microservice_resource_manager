@@ -1,0 +1,37 @@
+[project]
+name = "microservice_resource_manager"
+description = "A simple general microservice resource manager"
+authors = [{ name = "shejialuo", email = "shejialuo@gmail.com" }]
+dependencies = []
+requires-python = ">=3.11"
+license = { text = "AGPL-3.0-only" }
+readme = "README.md"
+keywords = [
+    "microservices",
+    "resource management",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Intended Audience :: Developers",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+
+[project.urls]
+homepage = "https://github.com/shejialuo/microservice_resource_manager"
+
+[project.scripts]
+microservice_resource_manager = "microservice_resource_manager.main:main"
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm]
+version = { from = "microservice_resource_manager/__init__.py" }
+
+[tool.black]
+line-length = 120
